@@ -1,10 +1,10 @@
 /**
- * Horae - 时光记忆插件样式
- * 作者: SenriYuki
+ * Horae - Plugin Ký ức Thời gian
+ * Tác giả: SenriYuki
  */
 
 /* ============================================
-   CSS 变量定义（挂在插件容器上，防止外部美化主题覆盖）
+   Định nghĩa biến CSS (Gắn vào container plugin để tránh bị theme bên ngoài ghi đè)
    ============================================ */
 #horae_drawer,
 .horae-message-panel,
@@ -33,7 +33,7 @@
 }
 
 /* ============================================
-   抽屉面板样式
+   Kiểu dáng Ngăn kéo (Drawer)
    ============================================ */
 #horae_drawer .drawer-header {
     display: flex;
@@ -61,7 +61,7 @@
     border-radius: 10px;
 }
 
-/* 标签页 */
+/* Tab điều hướng */
 .horae-tabs {
     display: flex;
     background: var(--horae-bg);
@@ -101,7 +101,7 @@
     font-size: 16px;
 }
 
-/* 标签页内容 */
+/* Nội dung Tab */
 .horae-tab-contents {
     background: var(--horae-bg-secondary);
     max-height: 60vh;
@@ -117,7 +117,7 @@
     display: block;
 }
 
-/* 状态区块 */
+/* Khu vực trạng thái */
 .horae-state-section {
     background: var(--horae-bg);
     border-radius: var(--horae-radius);
@@ -140,7 +140,7 @@
     color: var(--horae-primary-light);
 }
 
-/* 时间显示 */
+/* Hiển thị thời gian */
 .horae-time-display {
     display: flex;
     align-items: baseline;
@@ -159,7 +159,7 @@
     color: var(--horae-text);
 }
 
-/* 地点显示 */
+/* Hiển thị địa điểm */
 .horae-location-display {
     font-size: 14px;
     color: var(--horae-text);
@@ -180,7 +180,7 @@
     display: none;
 }
 
-/* 服装列表 */
+/* Danh sách trang phục */
 .horae-costume-list {
     display: flex;
     flex-direction: column;
@@ -208,7 +208,7 @@
     flex: 1;
 }
 
-/* 物品快速列表 */
+/* Danh sách nhanh vật phẩm */
 .horae-items-quick {
     display: flex;
     flex-wrap: wrap;
@@ -236,7 +236,7 @@
     color: var(--horae-text-muted);
 }
 
-/* 操作按钮组 */
+/* Nhóm nút thao tác */
 .horae-action-buttons {
     display: flex;
     gap: 8px;
@@ -264,7 +264,7 @@
     background: #dc2626;
 }
 
-/* 数据管理按钮网格 */
+/* Lưới nút quản lý dữ liệu */
 .horae-data-buttons-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -313,7 +313,7 @@
     transform: translateY(0);
 }
 
-/* 主要按钮样式 */
+/* Nút chính */
 .horae-data-btn.primary {
     background: linear-gradient(135deg, var(--horae-primary-dark), var(--horae-primary));
     border-color: var(--horae-primary);
@@ -333,7 +333,7 @@
     box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
 }
 
-/* 危险按钮样式 */
+/* Nút nguy hiểm */
 .horae-data-btn.danger {
     border-color: rgba(239, 68, 68, 0.3);
 }
@@ -352,7 +352,7 @@
 }
 
 /* ============================================
-   待办事项样式
+   Kiểu dáng Việc cần làm (Agenda)
    ============================================ */
 .horae-agenda-section {
     margin-bottom: 16px;
@@ -442,7 +442,7 @@
     transition: color 0.15s;
 }
 
-/* 待办多选模式 */
+/* Chế độ đa chọn Agenda */
 .horae-agenda-select-check {
     flex-shrink: 0;
     display: flex;
@@ -463,7 +463,7 @@
 }
 
 /* ============================================
-   时间线搜索栏
+   Thanh tìm kiếm Dòng thời gian
    ============================================ */
 .horae-timeline-search-row {
     display: flex;
@@ -497,7 +497,7 @@
 }
 
 /* ============================================
-   时间线样式
+   Kiểu dáng Dòng thời gian
    ============================================ */
 .horae-timeline-header {
     display: flex;
@@ -611,7 +611,7 @@
     color: var(--horae-text-muted);
 }
 
-/* 空状态 */
+/* Trạng thái trống */
 .horae-empty-state {
     display: flex;
     flex-direction: column;
@@ -628,7 +628,7 @@
 }
 
 /* ============================================
-   角色页样式
+   Kiểu dáng trang Nhân vật
    ============================================ */
 .horae-subsection {
     margin-bottom: 16px;
@@ -664,7 +664,7 @@
     color: var(--horae-primary-light);
 }
 
-/* 好感度列表 */
+/* Danh sách hảo cảm */
 .horae-affection-list {
     display: flex;
     flex-direction: column;
@@ -724,7 +724,7 @@
     text-align: right;
 }
 
-/* NPC 列表 */
+/* Danh sách NPC */
 .horae-npc-list {
     display: flex;
     flex-direction: column;
@@ -749,7 +749,7 @@
 }
 
 /* ============================================
-   物品页样式
+   Kiểu dáng trang Vật phẩm
    ============================================ */
 .horae-items-header {
     display: flex;
@@ -811,7 +811,7 @@
 }
 
 /* ============================================
-   设置页样式
+   Kiểu dáng trang Cài đặt
    ============================================ */
 .horae-settings-section {
     background: var(--horae-bg);
@@ -870,7 +870,7 @@
 }
 
 /* ============================================
-   消息面板样式
+   Kiểu dáng Bảng tin nhắn
    ============================================ */
 .horae-message-panel {
     margin-top: 8px;
@@ -1002,13 +1002,13 @@
     outline: none;
 }
 
-/* 底部栏合并日期时间输入 */
+/* Hợp nhất đầu vào ngày giờ ở thanh dưới cùng */
 .horae-input-datetime {
     flex: 1 !important;
     min-width: 100px;
 }
 
-/* 服装/物品编辑器 */
+/* Trình chỉnh sửa Trang phục/Vật phẩm */
 .horae-costume-editor,
 .horae-items-editor,
 .horae-affection-editor,
@@ -1039,7 +1039,7 @@
     max-width: 80px;
 }
 
-/* 物品图标输入 */
+/* Đầu vào icon vật phẩm */
 .horae-editor-row .item-icon {
     max-width: 40px;
     min-width: 40px;
@@ -1080,7 +1080,7 @@
     flex: 1;
 }
 
-/* 物品描述行 */
+/* Dòng mô tả vật phẩm */
 .horae-item-desc-row {
     margin-top: -4px;
     margin-bottom: 8px;
@@ -1101,7 +1101,7 @@
     padding: 4px;
 }
 
-/* 好感度编辑行 */
+/* Dòng chỉnh sửa hảo cảm */
 .horae-affection-row {
     display: flex;
     gap: 6px;
@@ -1165,7 +1165,7 @@
     color: var(--horae-primary-light);
 }
 
-/* 事件编辑器 */
+/* Trình chỉnh sửa sự kiện */
 .horae-event-editor {
     display: flex;
     gap: 8px;
@@ -1191,7 +1191,7 @@
     font-size: 12px;
 }
 
-/* 重新扫描区域 */
+/* Khu vực quét lại */
 .horae-panel-rescan {
     margin-top: 12px;
     padding: 12px;
@@ -1252,7 +1252,7 @@
     cursor: wait;
 }
 
-/* 面板底部按钮 */
+/* Nút dưới cùng của panel */
 .horae-panel-footer {
     display: flex;
     gap: 8px;
@@ -1272,7 +1272,7 @@
 }
 
 /* ============================================
-   进度条样式
+   Kiểu dáng thanh tiến trình
    ============================================ */
 .horae-progress-overlay {
     position: fixed;
@@ -1322,7 +1322,7 @@
 }
 
 /* ============================================
-   响应式调整
+   Điều chỉnh phản hồi (Responsive)
    ============================================ */
 @media (max-width: 768px) {
     .horae-tabs {
@@ -1342,12 +1342,12 @@
         font-size: 11px;
     }
     
-    /* 手机端待办删除按钮始终可见 */
+    /* Nút xóa agenda trên mobile luôn hiện */
     .horae-agenda-delete {
         opacity: 1;
     }
     
-    /* 手机端数据按钮保持2x2网格但调整大小 */
+    /* Mobile: Nút dữ liệu giữ lưới 2x2 nhưng chỉnh size */
     .horae-data-buttons-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 8px;
@@ -1383,7 +1383,7 @@
         font-size: 16px;
     }
     
-    /* 手机端物品编辑器适配 - 换行显示避免横向滚动 */
+    /* Mobile: Trình sửa vật phẩm xuống dòng để tránh cuộn ngang */
     .horae-item-row {
         flex-wrap: wrap;
         gap: 6px;
@@ -1423,13 +1423,13 @@
         order: 6;
     }
     
-    /* 手机端物品描述行 */
+    /* Mobile: Dòng mô tả vật phẩm */
     .horae-item-desc-row {
         padding-left: 0;
         margin-left: 0;
     }
     
-    /* 手机端服装编辑器适配 */
+    /* Mobile: Trình sửa trang phục */
     .horae-costume-editor .horae-editor-row {
         flex-wrap: wrap;
     }
@@ -1444,13 +1444,13 @@
         min-width: calc(100% - 120px);
     }
     
-    /* 手机端面板内容区可滚动 */
+    /* Mobile: Nội dung panel có thể cuộn */
     .horae-panel-content {
         max-height: 60vh;
         overflow-y: auto;
     }
     
-    /* 手机端底部按钮固定显示 */
+    /* Mobile: Nút dưới cùng cố định */
     .horae-panel-footer {
         position: sticky;
         bottom: 0;
@@ -1460,7 +1460,7 @@
         padding: 10px 12px;
     }
     
-    /* 手机端重扫描区域紧凑 */
+    /* Mobile: Khu vực quét lại gọn hơn */
     .horae-panel-rescan {
         padding: 10px;
     }
@@ -1472,7 +1472,7 @@
 }
 
 /* ============================================
-   动画
+   Hoạt ảnh
    ============================================ */
 @keyframes horae-fade-in {
     from {
@@ -1494,7 +1494,7 @@
 }
 
 /* ============================================
-   滚动条样式
+   Thanh cuộn
    ============================================ */
 .horae-tab-contents::-webkit-scrollbar,
 .horae-timeline-list::-webkit-scrollbar {
@@ -1518,7 +1518,7 @@
 }
 
 /* ============================================
-   物品重要程度样式
+   Mức độ quan trọng vật phẩm
    ============================================ */
 .horae-items-controls {
     display: flex;
@@ -1605,7 +1605,7 @@
 }
 
 /* ============================================
-   NPC 新格式样式
+   Kiểu dáng NPC định dạng mới
    ============================================ */
 .horae-npc-name {
     display: flex;
@@ -1644,7 +1644,7 @@
 }
 
 .horae-npc-appearance::before {
-    content: "外貌: ";
+    content: "Ngoại hình: ";
     opacity: 0.7;
 }
 
@@ -1654,7 +1654,7 @@
 }
 
 .horae-npc-personality::before {
-    content: "性格: ";
+    content: "Tính cách: ";
     opacity: 0.7;
 }
 
@@ -1664,7 +1664,7 @@
 }
 
 .horae-npc-relationship::before {
-    content: "关系: ";
+    content: "Quan hệ: ";
     opacity: 0.7;
 }
 
@@ -1673,7 +1673,7 @@
     color: var(--horae-text-muted);
 }
 
-/* NPC 扩展信息标签 */
+/* Thẻ thông tin mở rộng NPC */
 .horae-npc-extras {
     display: inline-flex;
     align-items: center;
@@ -1695,7 +1695,7 @@
     cursor: help;
 }
 
-/* 底部栏待办事项编辑行 */
+/* Dòng sửa agenda ở thanh dưới */
 .horae-editor-row.horae-agenda-edit-row input.agenda-date {
     flex: 0 0 90px !important;
     max-width: 90px;
@@ -1718,12 +1718,12 @@
 }
 
 .horae-npc-note::before {
-    content: "备注: ";
+    content: "Ghi chú: ";
     opacity: 0.7;
     font-style: normal;
 }
 
-/* NPC 性别图标颜色 */
+/* Màu icon giới tính NPC */
 .horae-gender-male {
     color: #60a5fa !important;
 }
@@ -1740,7 +1740,7 @@
     color: var(--horae-primary) !important;
 }
 
-/* 性别过滤栏 */
+/* Thanh lọc giới tính */
 .horae-gender-filter {
     display: flex;
     gap: 4px;
@@ -1775,7 +1775,7 @@
     color: #fff;
 }
 
-/* NPC 编辑弹窗紧凑行 */
+/* Dòng compact trong popup sửa NPC */
 .horae-edit-field-row {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -1783,7 +1783,7 @@
 }
 
 .horae-edit-field-compact {
-    min-width: 0; /* 防止内容溢出 grid */
+    min-width: 0; /* Tránh tràn grid */
 }
 
 .horae-edit-field-compact label {
@@ -1815,7 +1815,7 @@
 }
 
 /* ============================================
-   NPC 星标功能样式
+   Chức năng đánh dấu sao NPC
    ============================================ */
 .horae-npc-header {
     display: flex;
@@ -1850,7 +1850,7 @@
     background: rgba(245, 158, 11, 0.05);
 }
 
-/* 角色卡主要角色特殊样式 */
+/* Kiểu dáng đặc biệt cho nhân vật chính */
 .horae-npc-item.main-character {
     border-left: 3px solid var(--horae-primary);
     background: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(124, 58, 237, 0.05));
@@ -1873,7 +1873,7 @@
     color: var(--horae-primary);
 }
 
-/* 好感度列表主角色样式 */
+/* Kiểu dáng nhân vật chính trong danh sách hảo cảm */
 .horae-affection-item.main-character {
     border-left: 3px solid var(--horae-primary);
     background: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(124, 58, 237, 0.05));
@@ -1891,7 +1891,7 @@
     margin-right: 4px;
 }
 
-/* 在场角色徽章主角色样式 */
+/* Badge nhân vật chính trong danh sách có mặt */
 .horae-character-badge.main-character {
     background: linear-gradient(135deg, var(--horae-primary), var(--horae-primary-light));
     color: white;
@@ -1926,7 +1926,7 @@
     gap: 8px;
 }
 
-/* 好感度分隔线 */
+/* Đường phân cách hảo cảm */
 .horae-affection-divider {
     height: 1px;
     background: var(--horae-border);
@@ -1934,7 +1934,7 @@
 }
 
 /* ============================================
-   已删除物品显示
+   Hiển thị vật phẩm đã xóa
    ============================================ */
 .horae-deleted-items-display {
     display: flex;
@@ -1961,7 +1961,7 @@
 }
 
 /* ============================================
-   清理无主物品按钮
+   Nút icon (dọn dẹp v.v.)
    ============================================ */
 .horae-icon-btn {
     display: flex;
@@ -1984,7 +1984,7 @@
 }
 
 /* ============================================
-   清理无主物品弹窗
+   Popup (Modal)
    ============================================ */
 .horae-modal {
     position: fixed;
@@ -2118,7 +2118,7 @@
     border-color: #dc2626;
 }
 
-/* 高级设置说明样式 */
+/* Hướng dẫn cài đặt nâng cao */
 .horae-setting-hint {
     display: block;
     font-size: 11px;
@@ -2136,7 +2136,7 @@
     margin-right: 4px;
 }
 
-/* 空列表提示 */
+/* Trạng thái danh sách trống */
 .horae-cleanup-empty {
     text-align: center;
     padding: 24px;
@@ -2151,7 +2151,7 @@
 }
 
 /* ============================================
-   物品多选模式
+   Chế độ đa chọn vật phẩm
    ============================================ */
 .horae-items-hint {
     font-size: 11px;
@@ -2224,7 +2224,7 @@
     border-color: #dc2626;
 }
 
-/* 物品项选中状态 */
+/* Trạng thái chọn vật phẩm */
 .horae-full-item {
     position: relative;
     transition: all 0.15s ease;
@@ -2250,7 +2250,7 @@
     cursor: pointer;
 }
 
-/* 多选模式下物品项可点击 */
+/* Vật phẩm có thể click trong chế độ đa chọn */
 .horae-full-item[data-item-name] {
     cursor: pointer;
 }
@@ -2259,7 +2259,7 @@
     background: var(--horae-bg-hover);
 }
 
-/* 设置子提示 */
+/* Gợi ý phụ trong cài đặt */
 .horae-setting-sub-hint {
     display: block;
     font-size: 10px;
@@ -2270,7 +2270,7 @@
 }
 
 /* ============================================
-   物品描述显示
+   Hiển thị mô tả vật phẩm
    ============================================ */
 .horae-full-item-desc {
     font-size: 11px;
@@ -2284,7 +2284,7 @@
 }
 
 /* ============================================
-   列表项编辑按钮
+   Nút sửa trong danh sách
    ============================================ */
 .horae-editable-item {
     position: relative;
@@ -2320,7 +2320,7 @@
 }
 
 /* ============================================
-   编辑弹窗
+   Popup chỉnh sửa
    ============================================ */
 .horae-edit-modal-body {
     display: flex;
@@ -2362,14 +2362,14 @@
     border-color: var(--horae-primary);
 }
 
-/* NPC操作按钮组 */
+/* Nút thao tác NPC */
 .horae-npc-actions {
     display: flex;
     align-items: center;
     gap: 4px;
 }
 
-/* 时间线项目编辑按钮位置调整 */
+/* Điều chỉnh vị trí nút sửa trong timeline */
 .horae-timeline-item.horae-editable-item {
     position: relative;
     padding-right: 32px;
@@ -2381,7 +2381,7 @@
 }
 
 /* ============================================
-   移动端弹窗适配修复
+   Fix hiển thị trên di động
    ============================================ */
 @media screen and (max-width: 768px) {
     .horae-modal {
@@ -2413,7 +2413,7 @@
         font-size: 13px;
     }
     
-    /* 防止iOS输入时自动缩放 */
+    /* Tránh zoom trên iOS */
     .horae-modal input,
     .horae-modal textarea,
     .horae-modal select {
@@ -2422,10 +2422,10 @@
 }
 
 /* ============================================
-   电脑版底部栏物品编辑器宽度优化
+   Tối ưu chiều rộng editor trên PC
    ============================================ */
 @media screen and (min-width: 769px) {
-    /* 电脑版物品编辑行 */
+    /* Dòng sửa vật phẩm trên PC */
     .horae-item-row {
         display: flex;
         align-items: center;
@@ -2459,7 +2459,7 @@
         flex-shrink: 0;
     }
     
-    /* 电脑版编辑器行通用 */
+    /* Dòng editor chung trên PC */
     .horae-editor-row {
         display: flex;
         align-items: center;
@@ -2471,7 +2471,7 @@
         min-width: 60px;
     }
     
-    /* 电脑版服装编辑器 */
+    /* Trình sửa trang phục trên PC */
     .horae-costume-editor .horae-editor-row .char-input {
         width: 100px;
         min-width: 100px;
@@ -2485,7 +2485,7 @@
 }
 
 /* ============================================
-   Excel风格自定义表格
+   Bảng tùy chỉnh kiểu Excel
    ============================================ */
 .horae-custom-tables-list {
     display: flex;
@@ -2501,7 +2501,7 @@
     overflow: hidden;
 }
 
-/* 表格滚动容器 */
+/* Container cuộn bảng */
 .horae-excel-table-wrapper {
     overflow-x: auto;
     overflow-y: visible;
@@ -2595,24 +2595,24 @@
     border-color: var(--horae-danger);
 }
 
-/* Excel表格主体 */
+/* Thân bảng Excel */
 .horae-excel-table {
-    width: max-content;       /* 宽度由内容决定，不强制100% */
-    min-width: 100%;          /* 至少填满容器 */
+    width: max-content;       /* Chiều rộng theo nội dung */
+    min-width: 100%;          /* Ít nhất lấp đầy container */
     border-collapse: collapse;
     font-size: 12px;
-    table-layout: auto;       /* 列宽由内容自适应 */
+    table-layout: auto;
 }
 
 .horae-excel-table th,
 .horae-excel-table td {
     border: 1px solid var(--horae-border);
     padding: 0;
-    white-space: nowrap;      /* 内容不换行，撑开列宽 */
+    white-space: nowrap;      /* Nội dung không xuống dòng */
     position: relative;
 }
 
-/* 第一列（行标题）固定定位，滚动时始终可见 */
+/* Cột đầu tiên (Tiêu đề hàng) cố định */
 .horae-excel-table th:first-child,
 .horae-excel-table td:first-child {
     position: sticky;
@@ -2634,14 +2634,14 @@
     user-select: none;
 }
 
-/* 第一行表头也固定 */
+/* Hàng đầu tiên (Tiêu đề bảng) cố định */
 .horae-excel-table thead th {
     position: sticky;
     top: 0;
     z-index: 3;
 }
 
-/* 左上角单元格最高层级 */
+/* Góc trái trên cùng lớp cao nhất */
 .horae-excel-table thead th:first-child {
     z-index: 4;
 }
@@ -2651,7 +2651,7 @@
 }
 
 .horae-excel-table input {
-    /* 不设 width:100%，让 size 属性决定宽度，单元格自然撑开 */
+    /* Không đặt width:100%, để size quyết định độ rộng */
     min-width: 50px;
     padding: 6px 8px;
     background: transparent;
@@ -2671,14 +2671,14 @@
     opacity: 0.5;
 }
 
-/* 表格按钮容器 */
+/* Container nút bảng */
 .horae-table-buttons {
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
 }
 
-/* 添加表格按钮 */
+/* Nút thêm/nhập bảng */
 .horae-btn-add-table,
 .horae-btn-import-table {
     flex: 1;
@@ -2718,7 +2718,7 @@
     opacity: 0.5;
 }
 
-/* 右键菜单 */
+/* Menu chuột phải */
 .horae-context-menu {
     position: fixed;
     background: var(--horae-bg);
@@ -2755,7 +2755,7 @@
     margin: 4px 0;
 }
 
-/* 表格提示文字输入框 */
+/* Input nhắc nhở bảng */
 .horae-table-prompt-row {
     padding: 8px 12px;
     border-top: 1px solid var(--horae-border);
