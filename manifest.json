@@ -1,5 +1,5 @@
 {
-    "display_name": "Horae - 时光记忆",
+    "display_name": "Horae - VN",
     "loading_order": 100,
     "requires": [],
     "optional": [],
@@ -10,4 +10,5 @@
     "homePage": "",
     "auto_update": false
 }
+
 
