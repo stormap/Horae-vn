@@ -1,0 +1,108 @@
+<div class="horae-message-panel" data-message-id="{{messageId}}">
+    <div class="horae-panel-toggle">
+        <div class="horae-panel-icon">
+            <i class="fa-regular fa-clock"></i>
+        </div>
+        <div class="horae-panel-summary">
+            <span class="horae-summary-time">{{time}}</span>
+            <span class="horae-summary-divider">|</span>
+            <span class="horae-summary-event">{{eventSummary}}</span>
+            <span class="horae-summary-divider">|</span>
+            <span class="horae-summary-chars">{{characterCount}} người có mặt</span>
+        </div>
+        <div class="horae-panel-actions">
+            <button class="horae-btn-edit" title="Chỉnh sửa">
+                <i class="fa-solid fa-pen"></i>
+            </button>
+            <button class="horae-btn-expand" title="Mở rộng/Thu gọn">
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+        </div>
+    </div>
+    <div class="horae-panel-content" style="display: none;">
+        <div class="horae-panel-grid">
+            <div class="horae-panel-row">
+                <label><i class="fa-regular fa-clock"></i> Thời gian</label>
+                <div class="horae-panel-value">
+                    <input type="text" class="horae-input-datetime" placeholder="Ngày Giờ (Ví dụ 2026/2/4 15:00)" value="{{storyDate}}{{#storyTime}} {{storyTime}}{{/storyTime}}">
+                </div>
+            </div>
+
+            <div class="horae-panel-row">
+                <label><i class="fa-solid fa-location-dot"></i> Địa điểm</label>
+                <div class="horae-panel-value">
+                    <input type="text" class="horae-input-location" placeholder="Ví dụ: Quán cà phê > Tầng 2" value="{{location}}">
+                </div>
+            </div>
+
+            <div class="horae-panel-row">
+                <label><i class="fa-solid fa-cloud"></i> Bầu không khí</label>
+                <div class="horae-panel-value">
+                    <input type="text" class="horae-input-atmosphere" placeholder="Ví dụ: Thoải mái, Căng thẳng" value="{{atmosphere}}">
+                </div>
+            </div>
+
+            <div class="horae-panel-row">
+                <label><i class="fa-solid fa-users"></i> Có mặt</label>
+                <div class="horae-panel-value">
+                    <input type="text" class="horae-input-characters" placeholder="Phân cách bằng dấu phẩy" value="{{characters}}">
+                </div>
+            </div>
+
+            <div class="horae-panel-row full-width">
+                <label><i class="fa-solid fa-shirt"></i> Thay đổi trang phục</label>
+                <div class="horae-costume-editor" id="horae-costumes-{{messageId}}">
+                    {{costumeEditors}}
+                </div>
+                <button class="horae-btn-add-costume" title="Thêm ghi chép trang phục">
+                    <i class="fa-solid fa-plus"></i> Thêm
+                </button>
+            </div>
+
+            <div class="horae-panel-row full-width">
+                <label><i class="fa-solid fa-box-open"></i> Thay đổi vật phẩm</label>
+                <div class="horae-items-editor" id="horae-items-{{messageId}}">
+                    {{itemEditors}}
+                </div>
+                <button class="horae-btn-add-item" title="Thêm ghi chép vật phẩm">
+                    <i class="fa-solid fa-plus"></i> Thêm
+                </button>
+            </div>
+
+            <div class="horae-panel-row full-width">
+                <label><i class="fa-solid fa-bookmark"></i> Đánh dấu sự kiện</label>
+                <div class="horae-event-editor">
+                    <select class="horae-input-event-level">
+                        <option value="">Không</option>
+                        <option value="一般" {{eventLevelNormal}}>Bình thường</option>
+                        <option value="重要" {{eventLevelImportant}}>Quan trọng</option>
+                        <option value="关键" {{eventLevelCritical}}>Then chốt</option>
+                    </select>
+                    <input type="text" class="horae-input-event-summary" placeholder="Tóm tắt sự kiện (trong vòng 20 chữ)" value="{{eventSummaryText}}">
+                </div>
+            </div>
+
+            <div class="horae-panel-row full-width">
+                <label><i class="fa-solid fa-heart"></i> Thay đổi hảo cảm</label>
+                <div class="horae-affection-editor" id="horae-affection-{{messageId}}">
+                    {{affectionEditors}}
+                </div>
+                <button class="horae-btn-add-affection" title="Thêm thay đổi hảo cảm">
+                    <i class="fa-solid fa-plus"></i> Thêm
+                </button>
+            </div>
+        </div>
+
+        <div class="horae-panel-footer">
+            <button class="horae-btn-save menu_button">
+                <i class="fa-solid fa-check"></i> Lưu
+            </button>
+            <button class="horae-btn-cancel menu_button">
+                <i class="fa-solid fa-xmark"></i> Hủy
+            </button>
+            <button class="horae-btn-goto menu_button" title="Chuyển đến tin nhắn này">
+                <i class="fa-solid fa-arrow-right"></i> Đi tới
+            </button>
+        </div>
+    </div>
+</div>

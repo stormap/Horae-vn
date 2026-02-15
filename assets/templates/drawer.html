@@ -1,0 +1,382 @@
+<div id="horae_drawer" class="drawer">
+    <div class="drawer-toggle">
+        <div id="horae_drawer_icon" class="drawer-icon fa-regular fa-clock fa-fw closedIcon interactable" title="Horae - Ký ức Thời gian" tabindex="0"></div>
+    </div>
+    <div id="horae_drawer_content" class="drawer-content closedDrawer">
+        <div class="drawer-header">
+            <div class="horae-title">
+                <i class="fa-regular fa-clock"></i>
+                Horae Ký ức Thời gian
+            </div>
+            <span class="horae-version">v1.0.0</span>
+        </div>
+        
+        <div class="horae-tabs">
+            <button class="horae-tab active" data-tab="status">
+                <i class="fa-solid fa-gauge"></i>
+                <span>Trạng thái</span>
+            </button>
+            <button class="horae-tab" data-tab="timeline">
+                <i class="fa-solid fa-timeline"></i>
+                <span>Dòng thời gian</span>
+            </button>
+            <button class="horae-tab" data-tab="characters">
+                <i class="fa-solid fa-users"></i>
+                <span>Nhân vật</span>
+            </button>
+            <button class="horae-tab" data-tab="items">
+                <i class="fa-solid fa-box-open"></i>
+                <span>Vật phẩm</span>
+            </button>
+            <button class="horae-tab" data-tab="settings">
+                <i class="fa-solid fa-gear"></i>
+                <span>Cài đặt</span>
+            </button>
+        </div>
+        
+        <div class="horae-tab-contents">
+            <div id="horae-tab-status" class="horae-tab-content active">
+                <div class="horae-state-section">
+                    <div class="horae-section-header">
+                        <i class="fa-regular fa-clock"></i>
+                        Thời gian hiện tại
+                    </div>
+                    <div class="horae-time-display">
+                        <span id="horae-current-date">--/--</span>
+                        <span id="horae-current-time">--:--</span>
+                    </div>
+                </div>
+                
+                <div class="horae-state-section">
+                    <div class="horae-section-header">
+                        <i class="fa-solid fa-location-dot"></i>
+                        Địa điểm hiện tại
+                    </div>
+                    <div class="horae-location-display">
+                        <span id="horae-current-location">Chưa thiết lập</span>
+                        <span id="horae-current-atmosphere" class="horae-atmosphere-badge"></span>
+                    </div>
+                </div>
+                
+                <div class="horae-state-section">
+                    <div class="horae-section-header">
+                        <i class="fa-solid fa-shirt"></i>
+                        Trang phục nhân vật
+                    </div>
+                    <div id="horae-costumes-list" class="horae-costume-list">
+                        <div class="horae-empty-hint">Chưa có ghi chép trang phục</div>
+                    </div>
+                </div>
+                
+                <div class="horae-state-section">
+                    <div class="horae-section-header">
+                        <i class="fa-solid fa-cube"></i>
+                        Theo dõi vật phẩm
+                    </div>
+                    <div id="horae-items-quick" class="horae-items-quick">
+                        <div class="horae-empty-hint">Chưa có vật phẩm theo dõi</div>
+                    </div>
+                </div>
+                
+                <div class="horae-action-buttons">
+                    <button id="horae-btn-refresh" class="menu_button">
+                        <i class="fa-solid fa-rotate"></i> Làm mới
+                    </button>
+                </div>
+            </div>
+            
+            <div id="horae-tab-timeline" class="horae-tab-content">
+                <div class="horae-agenda-section">
+                    <div class="horae-agenda-header">
+                        <span><i class="fa-solid fa-list-check"></i> Việc cần làm</span>
+                        <button id="horae-btn-add-agenda" class="horae-icon-btn small" title="Thêm việc cần làm">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                    <div id="horae-agenda-multiselect-bar" class="horae-multiselect-bar" style="display: none;">
+                        <div class="horae-multiselect-info">
+                            <span id="horae-agenda-selected-count">0</span> mục đã chọn
+                        </div>
+                        <div class="horae-multiselect-actions">
+                            <button id="horae-btn-agenda-select-all" class="horae-icon-btn small" title="Chọn tất cả">
+                                <i class="fa-solid fa-check-double"></i>
+                            </button>
+                            <button id="horae-btn-agenda-delete" class="horae-icon-btn small danger" title="Xóa đã chọn">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </button>
+                            <button id="horae-btn-agenda-cancel-select" class="horae-icon-btn small" title="Hủy đa chọn">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="horae-agenda-list" class="horae-agenda-list">
+                        <div class="horae-empty-hint">Chưa có việc cần làm</div>
+                    </div>
+                </div>
+                
+                <div class="horae-timeline-header">
+                    <span>Dòng thời gian sự kiện</span>
+                    <div class="horae-timeline-controls">
+                        <select id="horae-timeline-filter" class="horae-select" title="Lọc cấp độ sự kiện">
+                            <option value="all">Tất cả</option>
+                            <option value="关键">Then chốt</option>
+                            <option value="重要">Quan trọng</option>
+                            <option value="一般">Bình thường</option>
+                        </select>
+                        <button id="horae-btn-scan-all" class="menu_button" title="Làm mới dòng thời gian">
+                            <i class="fa-solid fa-rotate"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="horae-timeline-search-row">
+                    <i class="fa-solid fa-magnifying-glass horae-search-icon"></i>
+                    <input type="text" id="horae-timeline-search" class="horae-search-input" placeholder="Tìm kiếm từ khóa sự kiện...">
+                </div>
+                <div id="horae-timeline-list" class="horae-timeline-list">
+                    <div class="horae-empty-state">
+                        <i class="fa-regular fa-clock"></i>
+                        <span>Chưa có bản ghi sự kiện</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="horae-tab-characters" class="horae-tab-content">
+                <div class="horae-subsection">
+                    <div class="horae-subsection-title">Nhân vật có mặt</div>
+                    <div id="horae-present-characters" class="horae-character-list">
+                        <div class="horae-empty-hint">Chưa có ghi chép</div>
+                    </div>
+                </div>
+                
+                <div class="horae-subsection">
+                    <div class="horae-subsection-title">Hảo cảm</div>
+                    <div id="horae-affection-list" class="horae-affection-list">
+                        <div class="horae-empty-hint">Chưa có ghi chép hảo cảm</div>
+                    </div>
+                </div>
+                
+                <div class="horae-subsection">
+                    <div class="horae-subsection-title">Nhân vật</div>
+                    <div id="horae-npc-list" class="horae-npc-list">
+                        <div class="horae-empty-hint">Chưa có ghi chép nhân vật</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="horae-tab-items" class="horae-tab-content">
+                <div class="horae-items-toolbar">
+                    <div class="horae-items-header">
+                        <span>Danh sách theo dõi vật phẩm</span>
+                        <div class="horae-items-controls">
+                            <select id="horae-items-holder-filter" class="horae-select" title="Lọc người sở hữu">
+                                <option value="all">Tất cả</option>
+                            </select>
+                            <select id="horae-items-filter" class="horae-select" title="Lọc cấp độ vật phẩm">
+                                <option value="all">Tất cả</option>
+                                <option value="关键">Then chốt</option>
+                                <option value="重要">Quan trọng</option>
+                                <option value="一般">Bình thường</option>
+                            </select>
+                            <button id="horae-btn-items-refresh" class="horae-icon-btn" title="Làm mới danh sách vật phẩm">
+                                <i class="fa-solid fa-rotate"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="horae-items-search-row">
+                        <i class="fa-solid fa-magnifying-glass horae-search-icon"></i>
+                        <input type="text" id="horae-items-search" class="horae-search-input" placeholder="Tìm tên vật phẩm, người giữ, vị trí...">
+                    </div>
+                </div>
+                <div id="horae-items-multiselect-bar" class="horae-multiselect-bar" style="display: none;">
+                    <div class="horae-multiselect-info">
+                        <span id="horae-items-selected-count">0</span> mục đã chọn
+                    </div>
+                    <div class="horae-multiselect-actions">
+                        <button id="horae-btn-items-select-all" class="horae-icon-btn small" title="Chọn tất cả">
+                            <i class="fa-solid fa-check-double"></i>
+                        </button>
+                        <button id="horae-btn-items-delete" class="horae-icon-btn small danger" title="Xóa đã chọn">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                        <button id="horae-btn-items-cancel-select" class="horae-icon-btn small" title="Hủy đa chọn">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="horae-items-hint">
+                    <i class="fa-solid fa-hand-pointer"></i> Nhấn giữ vật phẩm để vào chế độ đa chọn
+                </div>
+                <div id="horae-items-full-list" class="horae-items-full-list">
+                    <div class="horae-empty-state">
+                        <i class="fa-solid fa-box-open"></i>
+                        <span>Chưa có vật phẩm theo dõi</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="horae-tab-settings" class="horae-tab-content">
+                <div class="horae-settings-section">
+                    <div class="horae-section-header">
+                        <i class="fa-solid fa-toggle-on"></i>
+                        Cài đặt cơ bản
+                    </div>
+                    
+                    <div class="horae-setting-item">
+                        <label>
+                            <input type="checkbox" id="horae-setting-enabled" checked>
+                            Bật Horae
+                        </label>
+                    </div>
+                    
+                    <div class="horae-setting-item">
+                        <label>
+                            <input type="checkbox" id="horae-setting-auto-parse" checked>
+                            Tự động phân tích thẻ trong phản hồi AI
+                        </label>
+                    </div>
+                    
+                    <div class="horae-setting-item">
+                        <label>
+                            <input type="checkbox" id="horae-setting-inject-context" checked>
+                            Tự động tiêm ngữ cảnh trạng thái
+                        </label>
+                    </div>
+                    
+                    <div class="horae-setting-item">
+                        <label>
+                            <input type="checkbox" id="horae-setting-show-panel" checked>
+                            Hiển thị bảng siêu dữ liệu tin nhắn
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="horae-settings-section">
+                    <div class="horae-section-header">
+                        <i class="fa-solid fa-sliders"></i>
+                        Cài đặt nâng cao
+                    </div>
+                    
+                    <div class="horae-setting-item">
+                        <label>
+                            Độ sâu ngữ cảnh
+                            <input type="number" id="horae-setting-context-depth" min="5" max="100" value="15">
+                        </label>
+                        <span class="horae-setting-hint">
+                            <i class="fa-solid fa-circle-info"></i>
+                            Đọc siêu dữ liệu của N tin nhắn gần nhất để:<br>
+                            ① Tính toán thời gian tương đối (như "3 ngày trước")<br>
+                            ② Tổng hợp trạng thái (trang phục, vật phẩm, hảo cảm v.v.)<br>
+                            ③ Thu thập dòng thời gian cốt truyện gửi cho AI
+                        </span>
+                    </div>
+                    
+                    <div class="horae-setting-item">
+                        <label>
+                            Vị trí tiêm
+                            <input type="number" id="horae-setting-injection-position" min="0" max="10" value="1">
+                        </label>
+                        <span class="horae-setting-hint">
+                            <i class="fa-solid fa-circle-info"></i>
+                            Thông tin trạng thái Horae được chèn vào vị trí nào trong prompt AI:<br>
+                            0 = Cuối cùng (Sát tin nhắn mới nhất)<br>
+                            1 = Áp chót (Khuyến nghị, để lại không gian suy nghĩ cho AI)<br>
+                            Số càng lớn càng gần đầu
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="horae-settings-section">
+                    <div class="horae-section-header">
+                        <i class="fa-solid fa-table-cells"></i>
+                        Bảng tùy chỉnh
+                    </div>
+                    <span class="horae-setting-hint" style="margin-bottom: 12px;">
+                        <i class="fa-solid fa-circle-info"></i>
+                        Tạo bảng phong cách Excel, để AI điền thông tin cụ thể theo nhu cầu của bạn.<br>
+                        Nhấn giữ tiêu đề để thêm/xóa hàng cột. Mỗi bảng có thể đặt lời nhắc hướng dẫn AI cách điền.<br>
+                        <strong>Bảng được lưu theo cuộc trò chuyện hiện tại</strong>, chuyển đổi cuộc trò chuyện sẽ không bị mất. Có thể xuất/nhập để tái sử dụng ở cuộc trò chuyện khác.
+                    </span>
+                    
+                    <div id="horae-custom-tables-list" class="horae-custom-tables-list">
+                        </div>
+                    
+                    <div class="horae-table-buttons">
+                        <button id="horae-btn-add-table" class="horae-btn-add-table">
+                            <i class="fa-solid fa-plus"></i> Thêm bảng 2×2
+                        </button>
+                        <button id="horae-btn-import-table" class="horae-btn-import-table">
+                            <i class="fa-solid fa-upload"></i> Nhập bảng
+                        </button>
+                        <input type="file" id="horae-import-table-file" accept=".json" style="display:none;">
+                    </div>
+                </div>
+                
+                <div class="horae-settings-section">
+                    <div class="horae-section-header">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        Nội dung gửi cho AI
+                    </div>
+                    <span class="horae-setting-hint" style="margin-bottom: 12px;">
+                        <i class="fa-solid fa-circle-info"></i>
+                        Kiểm soát thông tin nào sẽ được gửi kèm prompt cho AI. Tắt có thể tiết kiệm Token, nhưng AI sẽ không thể "nhớ" những nội dung này.
+                    </span>
+                    
+                    <div class="horae-setting-item">
+                        <label>
+                            <input type="checkbox" id="horae-setting-send-timeline" checked>
+                            Dòng thời gian cốt truyện
+                        </label>
+                        <span class="horae-setting-sub-hint">Tóm tắt sự kiện lịch sử, tính toán thời gian tương đối. Sau khi tắt, AI sẽ không biết "mấy ngày trước" đã xảy ra chuyện gì.</span>
+                    </div>
+                    
+                    <div class="horae-setting-item">
+                        <label>
+                            <input type="checkbox" id="horae-setting-send-characters" checked>
+                            Thông tin nhân vật
+                        </label>
+                        <span class="horae-setting-sub-hint">Nhân vật có mặt, mô tả trang phục, hảo cảm, thông tin nhân vật. Sau khi tắt, AI có thể mô tả sai trang phục.</span>
+                    </div>
+                    
+                    <div class="horae-setting-item">
+                        <label>
+                            <input type="checkbox" id="horae-setting-send-items" checked>
+                            Kho đồ
+                        </label>
+                        <span class="horae-setting-sub-hint">Vật phẩm đang sở hữu và vị trí. Sau khi tắt, AI có thể lấy ra vật phẩm không tồn tại "từ hư không".</span>
+                    </div>
+                </div>
+                
+                <div class="horae-settings-section">
+                    <div class="horae-section-header">
+                        <i class="fa-solid fa-database"></i>
+                        Quản lý dữ liệu
+                    </div>
+                    
+                    <div class="horae-data-buttons-grid">
+                        <button id="horae-btn-scan-history" class="horae-data-btn primary">
+                            <i class="fa-solid fa-magnifying-glass-chart"></i>
+                            <span>Quét lịch sử</span>
+                        </button>
+                        <button id="horae-btn-export" class="horae-data-btn">
+                            <i class="fa-solid fa-file-export"></i>
+                            <span>Xuất</span>
+                        </button>
+                        <button id="horae-btn-import" class="horae-data-btn">
+                            <i class="fa-solid fa-file-import"></i>
+                            <span>Nhập</span>
+                        </button>
+                        <button id="horae-btn-clear" class="horae-data-btn danger">
+                            <i class="fa-solid fa-trash-can"></i>
+                            <span>Xóa</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="horae-about">
+                    <p>Horae v1.0.0 | Tác giả: SenriYuki</p>
+                    <p>Hệ thống tăng cường trí nhớ AI dựa trên các mốc thời gian</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
